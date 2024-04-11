@@ -23,4 +23,4 @@ jobs:
         username: ${{ secrets.ftp_username}}
         password: ${{ secrets.ftp_password}}
         protocol: ${{ secrets.ftp_protocol}}
-        server-dir: /public_html/johannes.ng/
+        server-dir: johannes.ng/
