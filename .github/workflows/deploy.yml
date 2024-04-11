@@ -1,9 +1,8 @@
 on:
-   push:
-    branches:
-      -main
+    push:
+        branches: 
+            - main
 name: 🚀 Deploy website on push
-
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -11,17 +10,7 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
-
-    - name: Use Node.js 20.11.0
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20.11.0'
-  
-    - name: Build Project
-      run: 
-          npm install
-          npm build
-
+    
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
@@ -29,4 +18,4 @@ jobs:
         username: ${{ secrets.GIT_CPANEL_FTP_USER}}
         password: ${{ secrets.GIT_CPANEL_FTP_PSW}}
         protocol: ${{ secrets.GIT_CPANEL_PROTOCOL}}
-        local-dir: ./build/
+        server-dir: /public_html/johannes.ng/
