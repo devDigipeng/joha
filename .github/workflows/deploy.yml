@@ -23,4 +23,4 @@ jobs:
         username: ${{ secrets.ftp_username}}
         password: ${{ secrets.ftp_password}}
         protocol: ${{ secrets.ftp_protocol}}
-        local=dir: /public_html/
+        local-dir: /public_html/
