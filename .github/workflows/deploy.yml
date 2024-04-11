@@ -14,8 +14,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ secrets.GIT_CPANEL_SERVER}}
-        username: ${{ secrets.GIT_CPANEL_FTP_USER}}
-        password: ${{ secrets.GIT_CPANEL_FTP_PSW}}
-        protocol: ${{ secrets.GIT_CPANEL_PROTOCOL}}
+        server: ${{ secrets.ftp_server}}
+        username: ${{ secrets.ftp_username}}
+        password: ${{ secrets.ftp_password}}
+        protocol: ${{ secrets.ftp_protocol}}
         server-dir: /public_html/johannes.ng/
